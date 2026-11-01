@@ -1,15 +1,17 @@
-# Experiment 1: Learn to use commands like tcpdump, netstat, ifconfig, nslookup and trace route. Capture ping and trace route PDUs using a network protocol analyzer and examine
+# Experiment 2: Write a program to identify your machine's host name and IP address
 
-# Commands covered in this experiment (run in the command prompt / terminal):
-# netstat
-# ipconfig
-# nslookup
-# tracert
-# ping
-# hostname
-# getmac
-# arp
-# tasklist
+import socket
+
+# Get the hostname of the machine
+hostname = socket.gethostname()
+
+# Get the IP address associated with the hostname
+ip_address = socket.gethostbyname(hostname)
+
+# Display the results
+print("Hostname:", hostname)
+print("IP Address:", ip_address)
 
 # OUTPUT:
-# Sample outputs for these commands are screenshots in the lab manual (not available as text).
+# Hostname: vm
+# IP Address: 127.0.0.1
